@@ -17,9 +17,9 @@ class InputController < ApplicationController
     # Pushbullet.com, korzystając w tym celu z gemu "pushbullet":
     # 
     #   @users = User.all
-    #   @users.each do |client|
-    #     client = Pushbullet::Client.new(client.pushbullet_api_key)
-    #     client.push_note(client.dev_iden, 'title', message_from_newrelic)
+    #   @users.each do |user|
+    #     client = Pushbullet::Client.new(user.pushbullet_api_key)
+    #     client.push_note(user.dev_iden, 'title', message_from_newrelic)
     #   end
    
   end

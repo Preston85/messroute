@@ -37,10 +37,8 @@ group :production do
 end
 
 gem 'pushbullet', '~> 0.0.2'
-gem 'bundler', '~> 1.5'
 gem 'faraday', '~> 0'
-gem 'mime-types', '~> 0'
-gem 'rake', '~> 0'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

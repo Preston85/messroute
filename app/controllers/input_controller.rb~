@@ -1,0 +1,21 @@
+class InputController < ApplicationController
+  def webhook
+    # Ta metoda miała się wywołać w momencie, gdy
+    # zewnętrzny serwis New Relic za pomocą metody POST
+    # przysyła dane w formacie JSON pod adres
+    # http://messroute.herokuapp.com/message
+
+    # Plan był taki, aby z JSON-a wyciągnąć treść wiadomości:
+    data_from_webhook = JSON.load(open("http://messroute.herokuapp.com/message"))
+    message = data_from_webhook("message")
+
+    # Następnym krokiem miało być wysyłanie tej wiadomości poprzez serwis 
+    # Pushbullet.com, korzystając w tym celu z gemu pushbullet:
+    
+    @users = User.all
+    client = Pushbullet::Client.new(PUSHBULLET_API_KEY)
+   
+
+   
+  end
+end
